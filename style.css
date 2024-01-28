@@ -12,18 +12,19 @@
 body {
     font-size: 16px;
     color: rgb(114, 112, 107);
-    line-height: 3rem;
+    line-height: 4rem;
 }
 
 /* 大きい文字 題名 */
-.navigation li,
+.navigation li a,
 section h2 {
     font-family: 'Shippori Mincho B1', serif;
 }
 
 /* 英語 */
 .TOPlogo a,
-.TOPimg h2 {
+.TOPimg h2,
+.sec2-eigo {
     font-family: 'League Script', cursive;
 }
 
@@ -39,10 +40,10 @@ h3 {
 .TOPimg {
     background-image: url(./img/top.jpg);
     width: 100%;
-    height: 100vh;
+    height: 113vh;
     background-repeat: no-repeat;
-    background-size: 103%;
-    background-position: 100% 35%;
+    background-size: 107%;
+    background-position: 74% 36%;
 
     /* やじるし親 */
     position: relative;
@@ -57,7 +58,7 @@ h3 {
 .TOPmozi {
     display: flex;
     align-items: center;
-    height: 75vh;
+    height: 100vh;
     justify-content: center;
 }
 
@@ -72,7 +73,7 @@ h3 {
 
 .navigation {
     display: flex;
-    height: 10vh;
+    height: 13vh;
     width: 90%;
     justify-content: space-between;
     margin: 0 auto;
@@ -96,10 +97,11 @@ h3 {
     list-style: none;
 }
 
-.navigation2 li {
+.navigation2 li a {
     text-decoration: none;
     padding-right: 25px;
     font-size: 16px;
+    color: rgb(114, 112, 107);
 }
 
 /* sns */
@@ -110,6 +112,7 @@ h3 {
 
 .snsicons {
     display: flex;
+    align-items: center;
 }
 
 
@@ -118,11 +121,10 @@ h3 {
 .scroll {
     position: absolute;
     left:50%;
-	bottom:10px;
-    animation: 2s scrollanm infinite ease-in-out;
+	bottom:15%;
     width: 0;
-    height: 5em;
-    border: .5px solid #F5F5F5;
+    height: 6em;
+    border: 1.5px solid #F5F5F5;
     &::after {
       content: '';
       display: block;
@@ -131,27 +133,10 @@ h3 {
       left: -1px;
       width: 1px;
       height: 10px;
-      border-top: 10px solid #F5F5F5;
-      border-right: 4px solid transparent;
+      border-top: 16px solid #F5F5F5;
+      border-right: 9px solid transparent;
     }
   }
-
-@keyframes scrollanm{
-	0%{
-		height:0;
-		top:500px;
-		opacity: 0;
-	}
-	30%{
-		height:60px;
-		opacity: 1;
-	}
-	100%{
-		height:0;
-		top:650px;
-		opacity: 0;
-	}
-}
 
 
 /* section */
@@ -165,15 +150,15 @@ h3 {
 
 
 .sec1-box {
-    width: 90%;
-    margin: 5rem auto;
+    width: 85%;
+    margin: 7rem auto;
     background: #fff;
-    padding: 3rem;
+    padding: 2.5rem;
 }
 
 .sec1-box2 {
-    border: 3px solid rgb(243, 233, 232);
-    padding: 5rem;
+    border: 4px solid rgb(243, 233, 232);
+    padding: 8rem;
 }
 
 /* 文字部分まとめ */
@@ -185,18 +170,18 @@ h3 {
     padding: 10px;
     text-align: center;
     position: relative;
-    font-size: 24px;
+    font-size: 30px;
 }
 
 /* 線 */
 
 .sec1-daimei:after {
     position: absolute;
-    top: 6rem;
-    left: 8%;
+    top: 8rem;
+    left: 4%;
     margin: 0 1rem;
     content: "";
-    width: 80%;
+    width: 90%;
     height: 0.5px;
     background-color: rgb(114, 112, 107);
 }
@@ -204,15 +189,16 @@ h3 {
 /* 文字 */
 
 .sec1-mozi {
-    padding-top: 6rem;
+    padding-top: 8rem;
     /* text-align: center; */
-    width: 75%;
+    width: 100%;
     margin: 0  auto;
+    font-size: 20px;
 }
 
 /* 三つのたま */
 .sec1-maru {
-    padding: 3rem;
+    padding-top: 5rem;
     display: flex;
     justify-content: center;
 }
@@ -221,8 +207,8 @@ h3 {
 .sec1-green,
 .sec1-blue {
     /* background: red; */
-    height: 75px;
-    width: 100px;
+    height: 95px;
+    width: 120px;
     border-radius: 50%;
 }
 
@@ -232,9 +218,113 @@ h3 {
 
 .sec1-green {
     background: #dcebb6;
-    margin: 50px 50px 0 50px;
+    margin: 60px 60px 0 60px;
 }
 
 .sec1-blue {
     background: #d7d6f4;
 }
+
+
+/* section1-2間 */
+
+.section1-2 {
+    width: 100%;
+    height: 300px;
+    border-radius: 100% 100% 0 0;
+    background: #fff;
+}
+
+
+/* section2 こだわり */
+
+.sec2daimei {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 5rem;;
+}
+
+/* sec2-1 味わい */
+
+.sec2-box {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+/* 画像 */
+.sec2-img img {
+    width: 100%;
+    border-radius: 200px 0;
+}
+
+.sec2-img {
+    width: 45%;
+}
+
+/* 文字 */
+.sec2-eigo {
+    font-size: 88px;
+    color: rgba(122, 111, 106, 0.3);
+}
+
+.sec2-mozi {
+    width: 45%;
+    margin: 20rem auto;
+}
+
+.sec2-mozi2 {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.sec2number {
+    color: #eeb8b8;
+}
+
+.sec2-daimei {
+    font-size: 24px;
+    line-height: 5rem;
+}
+
+.sec2-honbun {
+    margin-top: 2.5rem;
+}
+
+/* まる */
+.sec2-1maru {
+    background: #f6d4d4;
+    border-radius: 50%;
+    height: 600px;
+    width: 750px;
+    position: absolute;
+    bottom: -155px;
+    right: 240px;
+    z-index: -1;
+}
+
+.sec2-1,
+.sec2-2 {
+    position: relative;
+}
+
+
+/* sec2-2 自然派マカロン */
+
+.s2-2 {
+    background: #dcebb6;
+    border-radius: 0 50%;
+    height: 610px;
+    width: 848px;
+    bottom: -92px;
+    left: 200px;
+}
+
+.sec2-2 {
+    margin-top: 11rem;
+}
+
+.sec2number2 {
+    color: #dcebb6;
+}
+
