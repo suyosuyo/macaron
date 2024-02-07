@@ -1,0 +1,662 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* 共通 */
+
+h3,
+a,
+li,
+h4,
+h1,
+p,
+h2,
+label{
+    /* 文字 */
+    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'Zen Maru Gothic', serif;
+    font-size: 16px;
+    text-decoration: none;
+    color: #665f51;
+}
+
+
+h3 {
+    color: #665f51;
+}
+
+.secscr a {
+    color:  rgb(227, 205, 193);
+}
+
+html {
+    background: #f5efe5;
+
+    /* スクロールゆっくり */
+    scroll-behavior: smooth;
+}
+
+h3 {
+    line-height: 2;
+}
+
+/* section {
+    横幅指定
+    margin: 4rem auto;
+    position: relative;
+
+    width: 70%;
+} */
+
+.all {
+    /* 横幅指定 */
+    margin: 4rem auto;
+    position: relative;
+
+    width: 70%;
+}
+
+
+/* header */
+
+/* .headerimg {
+    background: url(./img/header.png);
+    width: 100%;
+    height: 30vh;
+    width: 100%;
+} */
+
+.headerimg {
+    background: #e7d4b5;
+}
+
+header img {
+    width: 100%;
+    height: 10vh;
+
+}
+
+.content1 {
+    background:  rgba(231, 212, 181,.4);
+    border-radius: 50px;
+}
+
+.con {
+    padding: 2rem;
+}
+
+header {
+    width: 100%;
+}
+
+.headerimg ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    width: 70%;
+    margin: 0 auto;
+    padding: 2%;
+}
+
+.headerimg h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f4f4f4;
+    text-align: center;
+}
+
+.headerimg a div {
+    width: 120px;
+}
+
+.headerimg li {
+    padding-left: 10px; 
+}
+
+
+/* hoverで下線 */
+.line {
+    padding-bottom: 4px;
+    position: relative;
+
+    &::after {
+        background-color: #f4f4f4;
+        bottom: 0;
+        content: '';
+        height: 4px;
+        position: absolute;
+        transition: .5s all;
+        width: 0;
+        border-radius: 10px;
+      }
+      
+      &:hover {
+        &:after {
+          width: 100%;
+        }
+}
+}
+  
+  .line{ 
+    &::after {
+    left: 50%;
+    transform: translateX(-50%)
+  }
+}
+
+
+/* メイン */
+.content1 h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 24px;
+}
+
+.icon img {
+    height: 300px;
+}
+
+
+/* ホバーででかくなる */
+.js-modal-open {
+    display: inline-block;
+    transition: .3s;
+
+  }
+
+.js-modal-open:hover {
+    transform: scale(0.9);
+  }
+
+
+/* footer */
+footer nav {
+    height: 20vh;
+    background: url(./img/footer.png);
+    width: 100%;
+    background-size: 1000px;
+    background-position: bottom -60px left 10px;
+}
+
+
+  /* スクロールバー */
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background: #a0937d;
+    border-radius: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background:  rgba(231, 212, 181,.3);
+    border-radius: 5px;
+  }
+
+
+  /* モーダル */
+
+
+
+/* h2 プライマリカラー*/
+
+
+.textbox {
+    width: 30%;
+    padding-left: 10px;
+}
+
+.textbox2 {
+    width: 50%;
+}
+
+
+.modal_img {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.img1 {
+    display: flex;
+    align-items: center;
+}
+
+.img1 img:nth-child(1) {
+    padding-right: 5%;
+}
+
+/* 作品列変更 */
+.itiretume,
+.niretume,
+.sanretume {
+    display: flex;
+    flex-direction: row;
+}
+
+.niretume {
+    margin: 5% 0;
+}
+
+.sakuhin {
+    display: flex;
+    flex-direction: column;
+}
+
+.sanretume {
+    margin: 0 auto;
+}
+
+
+
+.sumaho {
+    display: none;
+}
+
+.sumaho1 {
+    display: none;
+}
+
+/*  */
+
+
+
+
+
+
+/* レスポンシブメニュー */
+/* レスポンシブ */
+
+/* レスポンシブ ナビゲーション */
+.nav {
+    background: #a0937d;
+    height: 100vh;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+
+    /* ボタン押す前 */
+    bottom: 100%;
+    transition: all .8s;
+}
+
+.nav ul {
+    padding-top: 30vh;    
+}
+
+.btn {
+    padding: 4%;
+}
+
+.nav h3 {
+    color: #f5efe5;
+}
+
+.nav_active {
+    bottom: 0%;
+}
+
+/* ボタン */
+
+.button {
+    /* 見た目 */
+    background: url(../img/resicon1.png);
+    background-size: cover;
+    z-index: 999;
+    height: 100px;
+    width: 100px;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    transition: all .5s;
+}
+
+.button2 {
+    background: url(../img/resicon2.png);
+    background-size:cover;
+    transition: all .5s;
+}
+
+
+/* お試しローディング */
+
+/* おためしローディング */
+/* Loading背景画面設定　*/
+#splash {
+    /*fixedで全面に固定*/
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: 9999;
+      background: #f4f4f4;
+      text-align:center;
+    }
+
+    
+
+    /* aタグ 制作物リンク */
+
+    .textbox a {
+        line-height: 3;
+        color:#a0937d;
+        background-color: rgb(227, 205, 193);
+        padding: 8px 32px;
+        border-radius: 30px;
+        margin: 5% auto;
+    }
+
+    .textbox a:hover {
+        color: #f4f4f4;
+        transition: all .2s ease;
+    }
+
+    /* モーダル並び */
+    .content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /* モーダル */
+    .content{
+        margin: 0 auto;
+        padding: 40px;
+    }
+
+    .modal{
+        display: none;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+
+    .modal__bg{
+        background: rgba(0,0,0,0.8);
+        height: 100vh;
+        position: absolute;
+        width: 100%;
+    }
+    
+    .modal__content{
+        background: #fff;
+        left: 50%;
+        padding: 40px;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        width: 60%;
+        overflow: scroll;
+        height: 93%;
+        border-radius: 50px;
+        background:  #f5efe5;
+        line-height: 1.4em;
+        transition: 0.5s;
+
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .modal__content::-webkit-scrollbar {
+        display: none;
+    }
+
+    .content img {
+        height:300px;
+    }
+
+    .pic {
+        justify-content: space-around;
+    }
+
+
+    .modal_box {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .pc {
+        width: 50%;
+        align-items: center;
+        margin: 5% 0 0 0;
+    }
+
+    .img1 img {
+        width: 100%;
+        padding: 5%;
+    }
+
+    .textbox {
+        width: 100%;
+    }
+
+    .batu {
+        top: 25px;
+        position: absolute;
+        right: 25px;
+        font-size: 24px;
+    }
+
+    .modalbigbox h2 {
+        font-size: 24px;
+        line-height: 1.5;
+    }
+
+    .modalbigbox h2:after {
+        background-color: #ebd9c2; /* 線色 */
+        border-radius: 35px; /* 線幅の半分 */
+        content: "";
+        display: block;
+        height: 8px; /* 線幅 */
+    }
+
+    /* モーダルアイコン */
+
+
+      .iconmozi {
+          text-align: center;
+      }
+
+      .icon {
+        width: 300px;
+        margin: 0 auto 24px auto;
+      }
+
+    /*  */
+
+    /* レスポンシブ */
+
+@media screen and (min-width:600px)and (max-width:1117px) {
+    .box-1 {
+        flex-direction: column;
+    }
+
+    .icon {
+        margin: 0 auto 24px auto;
+    }
+
+    .modal_img {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 0 0 0;
+    }
+
+    .img1 {
+        width: 50%;
+        align-items: center;
+    }
+
+    .img1 img {
+        width: 100%;
+        padding: 5%;
+    }
+
+    .textbox,
+    .textbox2 {
+        width: 100%;
+        padding-top: 5%;
+    }
+
+    /* .itiretume {
+        display: flex;
+
+    } */
+
+    .sakuhin {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    /* mo-daru */
+    .modal_box {
+        display: block;
+    }
+
+    .pic {
+        display: flex;
+    }
+
+    .content {
+        padding: 0;
+    }
+
+    
+}
+
+@media screen and (min-width:320px)and (max-width:600px) {
+    .box-1 {
+        flex-direction: column;
+    }
+
+    .con {
+        padding: 2rem 0 0 0;
+    }
+
+    .icon {
+        margin: 0 auto 24px auto;
+    }
+
+    .content img {
+        height: 190px;
+    }
+
+    .content {
+        padding: 0;
+    }
+
+    .icon {
+        width: 190px;
+    }
+
+    .headerimg li {
+        display: none;
+    }
+
+    .sumaho {
+        display: block;
+    }
+
+
+    .box-1 {
+        flex-direction: column;
+    }
+
+    .icon {
+        margin: 0 auto 24px auto;
+    }
+
+    .modal_img {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 0 0 0;
+    }
+
+    .modal_content {
+        width: 80%;
+    }
+
+    .img1 {
+        width: 100%;
+        align-items: center;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .img1 img {
+        padding: 5%;
+    }
+
+    .modal_img img {
+        width: 200%;
+    }
+
+    .modal2 img {
+        width: 90%;
+    }
+
+    .sumaho1 img {
+        width: 100%;
+    }
+
+    .textbox,
+    .textbox2 {
+        width: 100%;
+        padding-top: 5%;
+    }
+
+    .sumaho1 {
+        display: block;
+    }
+
+    .pc {
+        display: none;
+    }
+
+/*  */
+    .sakuhin {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .itiretume,
+    .niretume,
+    .sanretume {
+        display: block;
+    }
+
+    .niretume {
+        margin: 0;
+    }
+
+    .sanretume {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .modal__content {
+        padding: 45px 20px 20px;
+    }
+      
+
+}
+
+/* PC */
+@media screen and (min-width:1118px) {
+
+    .img1 {
+        width: 50%;
+    }
+}
