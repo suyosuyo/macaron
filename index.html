@@ -4,8 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- CSS -->
+    <!-- slick スライダー -->
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+
+    <!-- 自分のCSS -->
     <link rel="stylesheet" href="./style.css">
+
+    <!-- js -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" 
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,7 +48,7 @@
 
                             <li><a href="">Mocamocaronsとは</a></li>
                             <li><a href="">Mocamocaronsのこだわり</a></li>
-                            <li><a href="">Pic up</a></li>
+                            <li><a href="">Pick up</a></li>
                             <li><a href="">News</a></li>
                             <li><a href="">Shop</a></li>
                             <li><a href="">Contact</a></li>
@@ -46,8 +56,12 @@
                         </ul>
 
                         <div class="snsicons">
-                            <img src="./img/インスタグラム2.png" alt="">
-                            <img src="./img/twitter2.png" alt="">
+                            <a href="">
+                                <img src="./img/instagram1.png" alt="">
+                            </a>
+                            <a href="">
+                                <img src="./img/twitter1.png" alt="">
+                            </a>
                             
                         </div>
 
@@ -71,7 +85,7 @@
 
     <main>
 
-        <!-- マカマカロンズとは -->
+        <!-- 1マカマカロンズとは -->
 
         <section class="sec1">
             
@@ -83,7 +97,7 @@
 
                     <div class="sec1-box3">
 
-                        <div class="sec1-daimei">
+                        <div class="secdaimei">
                             <h2>Mocamocarons-マカマカロンズ-とは</h2>
                         </div>
 
@@ -106,11 +120,14 @@
 
             </div>
 
-            <div class="section1-2"></div>
+            <div class="section1-2oya">
+                <div class="section1-2"></div>
+            </div>
 
         </section>
 
-        <!-- mocamocaronsのこだわり -->
+
+        <!-- 2mocamocaronsのこだわり -->
 
         <section class="sec2">
 
@@ -118,7 +135,7 @@
             <div class="sec2box">
 
                 <!-- 題名 -->
-                <div class="sec2daimei">
+                <div class="sec-daimei">
                     <h2>Mocamocaronsのこだわり</h2>
                 </div>
 
@@ -175,7 +192,7 @@
 
                         <!-- 文字 -->
                         <div class="sec2-mozi">
-                            <div class="sec2-eigo">
+                            <div class="sec2-eigo sec2-2eigo">
                                 <h1>Nature</h1>
                             </div>
 
@@ -187,7 +204,7 @@
                                 </div>
     
                                 <div class="sec2-honbun">
-                                    <h3>化学添加物を一切しようしないことで体に影響なく
+                                    <h3>化学添加物を一切しようしないことで体に影響なく<br>
                                         どんどん食べられるような、そんなマカロンを目指しています。
                                     </h3>
                                 </div>
@@ -203,6 +220,322 @@
                 </div>
 
 
+                <!-- みっつめ -->
+                <div class="sec2-3">
+
+                    <!-- 文字と画像 -->
+                    <div class="sec2-box">
+
+                        <!-- 文字 -->
+                        <div class="sec2-mozi">
+                            <div class="sec2-eigo">
+                                <h1>Wonder</h1>
+                            </div>
+
+                            <div class="sec2-mozi2">
+                                <div class="sec2-daimei">
+                                    <h2 class="sec2number sec2number3">03.</h2>
+                                    <h2>企業秘密の製法で作り上げた</h2>
+                                    <h2>病みつきの触感</h2>
+                                </div>
+    
+                                <div class="sec2-honbun">
+                                    <h3>Mocamocaronsでしか味わえない不思議な触感。</h3>
+                                    <h3>モチモチしているようなサクサクしているようなと<br>
+                                    様々な意見が飛び交うほど、盛り上がることまちがいなし！</h3>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- 画像 -->
+                        <div class="sec2-img">
+                            <img src="./img/sec2-3.jpg" alt="">
+                        </div>
+
+                    </div>
+
+                    <div class="sec2-1maru s2-3"></div>
+                    
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- 3Pic up -->
+
+        <section class="sec3">
+
+            <div>
+
+                <div class="sec-daimei">
+                    <h2>Pick up</h2>
+                </div>
+
+                <div id="double-slider">
+                    <div id="main-slider">
+                        <a href="">
+                        <img src="./img/マカロン切り抜き/マカロンシトロン.png" alt="">
+                        </a>
+                        
+                        <a href="">
+                        <img src="./img/マカロン切り抜き/マカロンラベンダー.png" alt="">
+                        </a>
+
+                        <a href="">
+                        <img src="./img/マカロン切り抜き/マカロンショコラ.png" alt="">
+                        </a>
+                        
+                        <a href="">
+                        <img src="./img/マカロン切り抜き/マカロンバニラ.png" alt="">
+                        </a>
+                    
+                        <a href="">
+                        <img src="./img/マカロン切り抜き/マカロンピスタチオ.png" alt="">
+                        </a>
+                    
+                        <a href="">
+                        <img src="./img/マカロン切り抜き/マカロンラズベリー.png" alt="">
+                        </a>
+                    
+                        <a href="">
+                        <img src="./img/マカロン切り抜き/マカロン抹茶.png" alt="">
+                        </a>
+
+                    </div>
+                    <div id="text-slider">
+
+                        <a href="">
+                        <div class="txt">
+                            <h2>シトロン</h2>
+                            <h3>瀬戸内海レモンクリームにレモンピューレも<br>
+                            加え、さわやかさに拍車をかけています</h3>
+                        </div>
+                        </a>
+
+                        <a href="">
+                        <div class="txt">
+                            <h2>NEW*ラベンダー</h2>
+                            <h3>富良野のラベンダージャムを織り交ぜており<br>
+                            大人な風味を味わえます</h3>
+                        </div>
+                    </a>
+
+                    <a href="">
+                        <div class="txt">
+                            <h2>ショコラ</h2>
+                            <h3>当店No.1商品でベルギーチョコを使用して<br>
+                            大人から子どもまで楽しめる逸品です</h3>
+                        </div>
+                    </a>
+
+                    <a href="">
+                        <div class="txt">
+                            <h2>バニラ</h2>
+                            <h3>瀬戸内海レモンクリームにレモンピューレも<br>
+                                加え、さわやかさに拍車をかけています</h3>
+                        </div>
+                    </a>
+
+                    <a href="">
+                        <div class="txt">
+                            <h2>ピスタチオ</h2>
+                            <h3>瀬戸内海レモンクリームにレモンピューレも<br>
+                                加え、さわやかさに拍車をかけています</h3>
+                        </div>
+                    </a>
+
+                    <a href="">
+                        <div class="txt">
+                            <h2>ラズベリー</h2>
+                            <h3>瀬戸内海レモンクリームにレモンピューレも<br>
+                                加え、さわやかさに拍車をかけています</h3>
+                        </div>
+                    </a>
+
+                    <a href="">
+                        <div class="txt">
+                            <h2>抹茶</h2>
+                            <h3>瀬戸内海レモンクリームにレモンピューレも<br>
+                                加え、さわやかさに拍車をかけています</h3>
+                        </div>
+                    </div>
+                </a>
+
+                </div>
+
+                <a href="" class="secbutton button3">
+                    <div class="secitiran">
+                        <h1>商品一覧はこちら</h1>
+                    </div>
+                </a>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- 4News -->
+
+        <section class="sec4">
+
+            <div>
+
+                <div class="sec-daimei">
+                    <h2>News</h2>
+                </div>
+
+                <div class="news_box">
+
+                    <a href="">
+                        <div class="news_box2">
+                            <div class="news_img img1">
+                            </div>
+                            <div class="news_text">
+                                <div class="day">
+                                    <!-- 日付 -->
+                                    <h3>202×.10.28</h3>
+                                </div>
+
+                                <div>
+                                    <!-- 内容 -->
+                                    <h3>NNGテレビ系列「DOSUKOI★TV」の中にて紹介されました。</h3>
+                                    
+                                </div>
+
+                                <div>
+                                    <!-- ⇒ -->
+                                    <div class="yazirusi"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="">
+                        <div class="news_box2">
+                            <div class="news_img img2">
+                            </div>
+                            <div class="news_text">
+                                <div class="day">
+                                    <!-- 日付 -->
+                                    <h3>202×.10.28</h3>
+                                </div>
+
+                                <div>
+                                    <!-- 内容 -->
+                                    <h3>NNGテレビ系列「DOSUKOI★TV」の中にて紹介されました。</h3>
+                                    
+                                </div>
+
+                                <div>
+                                    <!-- ⇒ -->
+                                    <div class="yazirusi"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="">
+                        <div class="news_box2">
+                            <div class="news_img img3">
+                            </div>
+                            <div class="news_text">
+                                <div class="day">
+                                    <!-- 日付 -->
+                                    <h3>202×.10.28</h3>
+                                </div>
+
+                                <div>
+                                    <!-- 内容 -->
+                                    <h3>NNGテレビ系列「DOSUKOI★TV」の中にて紹介されました。</h3>
+                                    
+                                </div>
+
+                                <div>
+                                    <!-- ⇒ -->
+                                    <div class="yazirusi"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+
+                <div class="sec4button">
+                    <a href="" class="sec4more">
+                    more
+                    </a>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- 5Shop -->
+
+        <section class="sec5">
+
+            <div>
+
+                <!-- 題名 -->
+                <div class="sec-daimei">
+                    <h2>Shop</h2>
+                </div>
+
+                <div class="sec5-shopbox">
+
+                    <a href="">
+                        <div class="sec5-shopimg">
+                            <img src="./img/comp1.png" alt="">
+                            <h2>店舗一覧</h2>
+                        </div>
+                    </a>
+    
+                    <a href="">
+                        <div class="sec5-shopimg">
+                            <img src="./img/comp2.png" alt="">
+                            <h2>Online Shop</h2>
+                        </div>
+                    </a>
+
+                </div>
+            
+            </div>
+
+        </section>
+
+
+
+        <!-- 6 Contact -->
+
+        <section class="sec6">
+
+            <div>
+
+                <!-- 題名 -->
+                <div class="sec-daimei">
+                    <h2>Contact</h2>
+                </div>
+
+                <div class="sec6-mozi">
+                    <h1>商品に関する取材依頼、お問い合わせ、要望はこちら</h1>
+    
+                    <a href="" class="secbutton button6">
+                        <div class="secitiran">
+                            <h1>お問い合わせはこちら</h1>
+                        </div>
+                    </a>
+                </div>
+
+                
+            
             </div>
 
         </section>
@@ -210,6 +543,34 @@
     </main>
 
 
+    <!-- footer -->
+
+    <footer>
+
+        <div class="section6-foya">
+            <div class="section6-f"></div>
+        </div>
+
+        <div class="footer-box">
+
+            <div class="sec1-maru f-maru">
+                <div class="sec1-red"></div>
+                <div class="sec1-green"></div>
+                <div class="sec1-blue"></div>
+            </div>
+
+            <div class="footer-mozi">
+                <h1>Mocamocarons</h1>
+                <h6>©Mocamocarons Co.All Rights Reserved.</h6>
+            </div>
+
+        </div>
+
+
+    </footer>
+
+
+        <script src="./main.js"></script>
 </body>
 
 </html>

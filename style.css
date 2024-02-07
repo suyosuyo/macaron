@@ -17,14 +17,20 @@ body {
 
 /* 大きい文字 題名 */
 .navigation li a,
-section h2 {
+section h2,
+.secbutton,
+.sec6-mozi,
+.news_box h3,
+.sec4more,
+.footer-mozi h6 {
     font-family: 'Shippori Mincho B1', serif;
 }
 
 /* 英語 */
 .TOPlogo a,
 .TOPimg h2,
-.sec2-eigo {
+.sec2-eigo,
+.footer-mozi h1 {
     font-family: 'League Script', cursive;
 }
 
@@ -82,7 +88,7 @@ h3 {
 }
 
 .navibox {
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(10px);
 }
 
@@ -108,6 +114,7 @@ h3 {
 .snsicons img {
     height: 30px;
     padding-left: 15px;
+    display: block;
 }
 
 .snsicons {
@@ -130,7 +137,7 @@ h3 {
       display: block;
       position: absolute;
       top: 100%;
-      left: -1px;
+      left: -0.5px;
       width: 1px;
       height: 10px;
       border-top: 16px solid #F5F5F5;
@@ -158,7 +165,7 @@ h3 {
 
 .sec1-box2 {
     border: 4px solid rgb(243, 233, 232);
-    padding: 8rem;
+    padding: 7rem;
 }
 
 /* 文字部分まとめ */
@@ -166,7 +173,7 @@ h3 {
 
 /* 題名部分 */
 
-.sec1-daimei {
+.secdaimei {
     padding: 10px;
     text-align: center;
     position: relative;
@@ -175,7 +182,7 @@ h3 {
 
 /* 線 */
 
-.sec1-daimei:after {
+.secdaimei:after {
     position: absolute;
     top: 8rem;
     left: 4%;
@@ -229,16 +236,24 @@ h3 {
 /* section1-2間 */
 
 .section1-2 {
-    width: 100%;
-    height: 300px;
-    border-radius: 100% 100% 0 0;
     background: #fff;
+    border-top-left-radius: 1000px 200px;
+    border-top-right-radius: 1000px 200px;
+    height: 300px;
+    margin-left: -100px;
+    margin-right: -100px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.section1-2oya {
+    overflow: hidden;
 }
 
 
 /* section2 こだわり */
 
-.sec2daimei {
+.sec-daimei {
     font-size: 30px;
     text-align: center;
     margin-bottom: 5rem;;
@@ -270,11 +285,14 @@ h3 {
 
 .sec2-mozi {
     width: 45%;
-    margin: 20rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 .sec2-mozi2 {
-    width: 80%;
+    width: 82%;
     margin: 0 auto;
 }
 
@@ -291,7 +309,7 @@ h3 {
     margin-top: 2.5rem;
 }
 
-/* まる */
+/* 背景まる */
 .sec2-1maru {
     background: #f6d4d4;
     border-radius: 50%;
@@ -304,27 +322,392 @@ h3 {
 }
 
 .sec2-1,
-.sec2-2 {
+.sec2-2,
+.sec2-3 {
     position: relative;
 }
 
 
 /* sec2-2 自然派マカロン */
 
+/* 背景まる */
 .s2-2 {
     background: #dcebb6;
     border-radius: 0 50%;
     height: 610px;
-    width: 848px;
+    width: 860px;
     bottom: -92px;
-    left: 200px;
+    left: 100px;
 }
 
-.sec2-2 {
+/* 上との空白 */
+.sec2-2,
+.sec2-3 {
     margin-top: 11rem;
 }
 
+/* 数字 */
 .sec2number2 {
     color: #dcebb6;
 }
 
+/* 薄い英語部分 */
+.sec2-2eigo {
+    text-align: right;
+}
+
+
+/* sec2-3 病みつきの触感 */
+
+/* 背景まる */
+.s2-3 {
+    background: #d7d6f4;
+}
+
+/* 番号 */
+.sec2number3 {
+    color: #d7d6f4;
+}
+
+
+
+/* section3 Picup */
+
+.sec3 {
+    margin-top: 350px;
+}
+
+
+/* スライダー */
+
+/* スライダーやじるし設定 */
+.slick-arrow {
+    z-index: 2;
+ }
+
+.slick-prev { 
+    left: 20%!important; 
+    /* background: rgb(243, 233, 232); */
+}
+
+
+.slick-prev:before, .slick-next:before {
+    color: rgb(243, 233, 232);
+    opacity: 1;
+    font-size: 100px;
+    /* font-family: 'Shippori Mincho B1', serif; */
+}
+
+.slick-next { 
+    right: 20%!important; 
+}
+
+/* スライダー大きい */
+
+#double-slider {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    padding-bottom: 3rem;
+}
+
+/* 画像 */
+#main-slide .slick-slide img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    margin: 0 400px;
+}
+
+/* 文字 */
+#text-slider{
+    width: 100%;
+    padding: 30px 0;
+    text-align: center;
+    border-radius: 10px;   
+}
+
+#text-slider a {
+    text-decoration: none;
+    color: rgb(114, 112, 107);
+}
+
+/* 間隔 */
+#text-slider .txt {
+    width: 380px;
+    margin-right: 7vw!important;
+    margin-left: 7vw!important; 
+}
+
+#main-slider .slick-slide{
+    margin-right: 10vw!important;
+    margin-left: 10vw!important; 
+}
+
+/* 文字 スタイル */
+.txt h3 {
+    line-height: 2rem;
+    margin-top: 2rem;
+    text-align: left;
+}
+
+.txt h2 {
+    font-size: 32px;
+}
+
+/* ドット部分 */
+.slick-dots {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -30%;
+}
+
+/* ボタン */
+.slick-dots li button:before {
+    color: #c9c9c9;
+    content: '●';
+    font-size: 28px;
+}
+/* アクティブボタン */
+.slick-dots li.slick-active button:before {
+    color: #f6d4d4;
+}
+
+/* ボタン 一覧 */
+.button3 {
+    margin: 8rem auto;
+}
+
+/* section3終わりの隙間 */
+.sec3 {
+    margin-bottom: 21rem;
+}
+
+
+/* sec4 NEWS */
+.sec4 {
+    background: rgb(243, 233, 232);
+    padding-top: 12rem;
+}
+
+.news_box {
+    display: flex;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.news_box2 {
+    background: #fff;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 3px 3px 5px 0px rgba(131, 131, 131, 0.4);
+}
+
+.news_box a:nth-child(2) {
+    margin: 0 15px;
+}
+
+/* 中の文字 */
+.news_box h3 {
+    color: rgb(114, 112, 107);
+}
+
+.news_box a {
+    text-decoration: none;
+}
+
+.news_text {
+    padding: 8%;
+    line-height: 2.5rem;
+    flex-grow: 1;
+}
+
+.day {
+    background: rgb(243, 233, 232);
+    width: 26%;
+    padding: 0px 3%;
+    border-radius: 40%;
+}
+
+.day h3 {
+    font-size: 16px;
+}
+
+/* 画像 */
+.img1 {
+    background: url(./img/NEWS1.jpg);
+    background-position: top;
+}
+
+.img2 {
+    background: url(./img/NEWS2.jpg);
+    background-position: top;
+}
+
+.img3 {
+    background: url(./img/top.jpg);
+    background-position: bottom;
+}
+
+.news_img {
+    height: 400px;
+    width: 100%;
+    background-size: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+/* やじるし→ */
+.yazirusi {
+    position: relative;
+    left:75%;
+	bottom:15%;
+    width: 6em;
+    height: 0;
+    border: 1.5px solid #ddd1d1;
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 100%;
+        right: -2px;
+        width: 0px;
+        height: 0px;
+        border-bottom: 8px solid #ddd1d1;
+        border-right: 21px solid transparent;
+    }
+  }
+
+
+/* more */
+.sec4button {
+    width: 350px;
+    height: 100px;
+    background: #fff;
+    margin: 5rem auto 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sec4more {
+    text-decoration: none;
+    color: rgb(114, 112, 107);
+    font-size: 40px;
+    padding: 18px 120px;
+}
+
+/* sec4 sec5 間 */
+.sec4 {
+    padding-bottom: 4rem;
+}
+
+
+
+/* sec5 Shop */
+
+.sec5 {
+    margin-top: 220px;
+}
+
+/* 画像二枚 */
+.sec5-shopbox {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.sec5-shopbox img {
+    width: 100%;
+}
+
+/* ショップボタン */
+.sec5-shopimg {
+    position: relative;
+}
+
+.sec5-shopimg h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    color: #fff;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* sec5 Shop */
+
+.sec6 {
+    margin: 180px;
+}
+
+.sec6-mozi {
+    margin-top: 180px;
+    font-size: 28px;
+    text-align: center;
+}
+
+
+/* sec3,6共通ボタン */
+.secbutton {
+    width: 850px;
+    height: 180px;
+    background: rgb(243, 233, 232);
+    border: 1.5px solid rgb(114, 112, 107);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.secitiran {
+    text-decoration: none;
+    color: rgb(114, 112, 107);
+    font-size: 32px;
+}
+
+.button6 {
+    margin: 4rem auto;
+}
+
+
+/* sec7-footer */
+
+footer {
+    background: rgb(243, 233, 232);
+}
+
+/* footer-sec6 間 */
+.section6-f {
+    background: #ffffff;
+    border-bottom-left-radius: 1000px 200px;
+    border-bottom-right-radius: 1000px 200px;
+    height: 200px;
+    margin-left: -100px;
+    margin-right: -100px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.section6-foya {
+    overflow: hidden;
+}
+
+/* みっつの玉 */
+.f-maru {
+    margin: 3rem 0 4rem 0;
+}
+
+/* 文字 */
+.footer-mozi {
+    text-align: center;
+    padding: 6rem 0;
+}
+
+.footer-mozi h1 {
+    font-size: 72px;
+    padding-bottom: 2rem;
+}
