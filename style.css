@@ -788,6 +788,7 @@ footer {
     position: fixed;
     bottom: 100%;
     z-index: 9;
+    /* visibility: hidden; */
 }
 
 
@@ -813,6 +814,7 @@ footer {
 
 .nav-active {
     top: 0;
+    /* visibility: visible; */
 }
 
 .button-active {
@@ -826,12 +828,13 @@ footer {
 .nav-box a {
     text-decoration: none;
     color: #fff;
-    font-size: 32px;
+    font-size: 26px;
+    
 }
 
 .nav-box h3 {
     color: #fff;
-    font-size: 32px;
+    font-size: 26px;
 }
 
 .snav-list {
@@ -1185,7 +1188,7 @@ footer {
     }
 
     .sec2-mozi2 {
-        width: 85%;
+        width: 90%;
     }
 
     .sec2-img img {
